@@ -37,7 +37,7 @@ Usage
 Templates
 ---------
 
-The output can be customized by adding a folder called `templates` and adding any of the following files:
+The output can be customized by adding a folder called `templates` to the directory containing `sources.json` and adding any of the following files:
 
 `head.html` - Contents for the `head` tag
 
