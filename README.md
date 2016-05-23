@@ -5,7 +5,9 @@ Licenses html generator
 
 Generates an html licenses file from a list of license sources, which can be git repos or local files. For git repos, it makes a shallow clone and automatically gets the license from the readme or license file.
 
-[Example sources file](http://stephentuso.github.io/licenses-html-generator/sources.json)[Example generated page](http://stephentuso.github.io/licenses-html-generator/licenses.html)
+[Example sources file](http://stephentuso.github.io/licenses-html-generator/sources.json)
+
+[Example generated page](http://stephentuso.github.io/licenses-html-generator/licenses.html)
 
 Usage
 -----
