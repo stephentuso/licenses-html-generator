@@ -16,7 +16,7 @@ Usage
 
 2) Create a new directory for the script to do its thing in (this is where it will clone any git repos and where the output html file will be)
 
-3) Create a file called `sources.json` in the new directory that contains a json array of sources:
+3) In that directory, create a file called `sources.json` that contains a json array of sources:
 
 ```
 [
