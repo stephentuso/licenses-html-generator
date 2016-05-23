@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 16px;
+}
+
+header, footer, .content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.license {
+    background: #eee;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.license p {
+    margin-top: 0;
+}
+
+hr {
+    border-top: 1px solid lightgrey;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: 25px 0px
+}

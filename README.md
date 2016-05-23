@@ -41,13 +41,15 @@ The output can be customized by adding a folder called `templates` and adding an
 
 `head.html` - Contents for the `head` tag
 
-`styles.css` - CSS that will be inlined
+`styles.css` - CSS that will be inlined. Use `.license` to style the licenses. This is added in addition to the default styles. To override the default styles use `default-styles.css`
 
-`pre-licenses.html` - Html to go at top of page, above all licenses
+`header.html` - Html to go at top of page, above all licenses. Will be contained in a `header` element.
 
 `license-header.html` - Html that comes before each license. Put `<!--NAME-->` where you want the name of the license to go.
 
-`license.html` - Html for the license. Put `<!--LICENSE-->` where you want the license html to go.
+`license.html` - For wrapping the license html. Put `<!--LICENSE-->` where you want the license html to go.
+
+`footer.html` - Html for the bottom of the page. Will be contained in a `footer` element. If you don't want to have "Created with Licenses HTML Generator" at the bottom, create this file.
 
 License
 -------

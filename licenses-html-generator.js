@@ -67,11 +67,11 @@ var licensesHtmlGenerator = {
         }
 
         var files = fs.readdirSync(reposDir);
-        var html = "<!DOCTYPE html>\n<html>\n<head>" + readTemplateFile('head.html') + "\n<style>" + getStyle() + "</style>\n</head>\n<body><div class=\"content\">\n\t"
+        var html = "<!DOCTYPE html>\n<html>\n<head>" + readTemplateFile('head.html') + "\n<style>" + readTemplateFile('default-styles.css') + readTemplateFile('styles.css') + "</style>\n</head>\n<body><div class=\"content\">\n\t"
 
-        var preLicenses = getPreLicensesContent();
-        if (preLicenses != null && preLicenses != '') {
-            html += "\t" + preLicenses + "\n\t<hr/>\n";
+        var header = readTemplateFile('header.html');
+        if (header != null && header != '') {
+            html += "\t<header>\n\t" + header + "\n\t</header>\n\t<hr/>\n";
         }
 
         console.log("\n");
@@ -87,13 +87,19 @@ var licensesHtmlGenerator = {
                 continue;
             }
             if (i > 0) {
-                html += "\t<hr/>\n";
+                html += "\t<hr>\n";
             }
-            html += "\t" + getHeader(source.name) + "\n";
-            html += "\t" + getHtmlForLicenseString(licenseString) + "\n"
+            html += "\t" + getLicenseHeader(source.name) + "\n";
+            html += '\t<div class="license">' + getHtmlForLicenseString(licenseString) + '\n</div>\n'
         }
 
-        html += "</div></body>\n</html>";
+        html += "</div>\n";
+
+        var footer = readTemplateFile("footer.html");
+        if (footer != null && footer != "") {
+            html += "<footer>\n<hr>\n" + footer + "\n</footer>\n";
+        }
+        html += "</body>\n</html>";
 
         var outPath = path.join(outDir, "licenses.html");
         fs.writeFileSync(outPath, html, 'utf8');
@@ -107,16 +113,7 @@ function isGitRepoUrl(url) {
     return url.startsWith('http');
 }
 
-function getPreLicensesContent() {
-    var preLicenses = readTemplateFile("pre-licenses.html");
-    return preLicenses;
-}
-
-function getStyle() {
-    return readTemplateFile('style.css');
-}
-
-function getHeader(name) {
+function getLicenseHeader(name) {
     var template = readTemplateFile('license-header.html');
     return template.replace(/<!--NAME-->/g, name);
 }
@@ -178,7 +175,7 @@ function tryGetLicenseFromReadme(dir) {
     var files = fs.readdirSync(dir);
     var readmePath = getFilePathStartsWith(dir, 'readme');
     var readme = fs.readFileSync(readmePath, "utf8");
-    var matches = readme.match(/(?:License\n-+|#+\s+License)\n*(?:`{3}|(?=\n?\ {4}))+((?:.|\n(?!\ \[))*)/i);
+    var matches = readme.match(/(?:License\n-+|#+\s+License)\n*(?:`{3}|(?=\n?\ {4}))+\n*((?:.|\n(?!\ \[|\`{3}))*)/i);
     return matches != null ? matches[1] : null;
 }
 
