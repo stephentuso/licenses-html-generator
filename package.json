@@ -1,6 +1,6 @@
 {
   "name": "licenses-html-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generates html licenses file from list of sources (git repos or local files)",
   "main": "main.js",
   "bin": {
