@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Licenses HTML Generator : Generates html licenses file from a list of sources">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Licenses HTML Generator</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/stephentuso/licenses-html-generator">View on GitHub</a>
+
+          <h1 id="project_title">Licenses HTML Generator</h1>
+          <h2 id="project_tagline">Generates html licenses file from a list of sources</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/stephentuso/licenses-html-generator/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/stephentuso/licenses-html-generator/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://www.npmjs.com/package/licenses-html-generator"> <img src="https://img.shields.io/npm/v/licenses-html-generator.svg" alt="npm"> </a></p>
+
+<p>Generates an html licenses file from a list of license sources, which can be git repos or local files. For git repos, it makes a shallow clone and automatically gets the license from the readme or license file.</p>
+
+<p><a href="http://stephentuso.github.io/licenses-html-generator/sources.json">Example sources file</a></p>
+
+<p><a href="http://stephentuso.github.io/licenses-html-generator/licenses.html">Example generated page</a></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>1) Install with <code>npm install -g licenses-html-generator</code></p>
+
+<p>2) Create a new directory for the script to do its thing in (this is where it will clone any git repos and where the output html file will be)</p>
+
+<p>3) Create a file called <code>sources.json</code> in the new directory that contains a json array of sources:</p>
+
+<pre><code>[
+    {
+        "name": "Example 1",
+        "uri": "https://github.com/example/example-repo.git"
+    },
+    {
+        "name": "Example 2",
+        "uri": "./local-license-text-file.txt"
+    }
+]
+
+</code></pre>
+
+<p>4) Run <code>licenses-html-generator /path/to/dir/from/step/2</code>. The html file will be located at <code>./out/licenses.html</code></p>
+
+<h2>
+<a id="templates" class="anchor" href="#templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Templates</h2>
+
+<p>The output can be customized by adding a folder called <code>templates</code> to the directory containing <code>sources.json</code> and adding any of the following files:</p>
+
+<p><code>head.html</code> - Contents for the <code>head</code> tag</p>
+
+<p><code>styles.css</code> - CSS that will be inlined</p>
+
+<p><code>pre-licenses.html</code> - Html to go at top of page, above all licenses</p>
+
+<p><code>license-header.html</code> - Html that comes before each license. Put <code>&lt;!--NAME--&gt;</code> where you want the name of the license to go.</p>
+
+<p><code>license.html</code> - Html for the license. Put <code>&lt;!--LICENSE--&gt;</code> where you want the license html to go.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>Released under the MIT License.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Licenses HTML Generator maintained by <a href="https://github.com/stephentuso">stephentuso</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
