@@ -1,0 +1,22 @@
+{
+  "name": "licenses-html-generator",
+  "version": "1.0.0",
+  "description": "Scripts to generate html license file from list of git repos",
+  "main": "main.js",
+  "bin": {
+    "licenses-html-generator": "./main.js"
+  },
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephentuso/licenses-html-generator.git"
+  },
+  "author": "stephentuso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephentuso/licenses-html-generator/issues"
+  },
+  "homepage": "https://github.com/stephentuso/licenses-html-generator#readme"
+}
