@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Bolts",
+        "uri": "https://github.com/BoltsFramework/Bolts-Android.git"
+    },
+    {
+        "name": "Parse Android SDK",
+        "uri": "https://github.com/ParsePlatform/Parse-SDK-Android.git"
+    },
+    {
+        "name": "Material Calendar View",
+        "uri": "https://github.com/prolificinteractive/material-calendarview.git"
+    },
+    {
+        "name": "Welcome",
+        "uri": "https://github.com/stephentuso/welcome-android.git"
+    },
+    {
+        "name": "Butter Knife",
+        "uri": "https://github.com/JakeWharton/butterknife.git"
+    },
+    {
+        "name": "Picasso",
+        "uri": "https://github.com/square/picasso.git"
+    },
+    {
+        "name": "PhotoView",
+        "uri": "https://github.com/chrisbanes/PhotoView.git"
+    }
+]
