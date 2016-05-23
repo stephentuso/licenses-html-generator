@@ -6,9 +6,11 @@ Generates an html licenses file from a list of license sources, which can be git
 Usage
 -----
 
-1) Create a new directory for the script to do its thing in (this is where it will clone any git repos and where the output will be)
+1) Install with `npm install -g licenses-html-generator`
 
-2) Create a file called `sources.json` in the new directory that contains a json array of sources:
+2) Create a new directory for the script to do its thing in (this is where it will clone any git repos and where the output html file will be)
+
+3) Create a file called `sources.json` in the new directory that contains a json array of sources:
 
 ```
 [
@@ -24,7 +26,7 @@ Usage
 
 ```
 
-3) Run `licenses-html-generator /path/to/dir/from/step/1`. The html file will be located at `./out/licenses.html`
+4) Run `licenses-html-generator /path/to/dir/from/step/2`. The html file will be located at `./out/licenses.html`
 
 Templates
 ---------
