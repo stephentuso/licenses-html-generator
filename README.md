@@ -9,6 +9,8 @@ Generates an html licenses file from a list of license sources, which can be git
 
 [Example generated page](http://stephentuso.github.io/licenses-html-generator/licenses.html)
 
+All contributions welcome!
+
 Usage
 -----
 
