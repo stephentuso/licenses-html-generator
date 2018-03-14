@@ -1,6 +1,8 @@
 Licenses html generator
 =======================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stephentuso/licenses-html-generator.svg)](https://greenkeeper.io/)
+
 [ ![npm](https://img.shields.io/npm/v/licenses-html-generator.svg) ](https://www.npmjs.com/package/licenses-html-generator)
 
 Generates an html licenses file from a list of license sources, which can be git repos or local files. For git repos, it makes a shallow clone and automatically gets the license from the readme or license file.
